@@ -1,0 +1,37 @@
+{{#each projects as |project| }}
+<div class="row align-center mb-5">
+  <div class="col-md-4">
+    <h2>{{{get_emoji}}} {{project.name}}</h2>
+  </div>
+  <div class="col-md-4">
+    <h3>{{project.description}}</h3>
+  </div>
+<div class="col-md-2">
+    <h3>{{project.needed_funding}}</h3>
+  </div>
+<div class="col-md-2">
+    <button class="btn btn-primary delete-btn" type="submit" data-project-id = {{project.id}}>delete</button>
+  </div>
+</div>
+{{/each}}
+
+
+<form class="form create-form">
+  <div class="form-group">
+    <label for="project-name">name:</label>
+    <input class="form-input" type="text" id="project-name" />
+  </div>
+  <div class="form-group">
+    <label for="project-description">description:</label>
+    <input class="form-input" type="text" id="project-description" />
+  </div>
+  <div class="form-group">
+    <label for="needed-funding">funding needed:</label>
+    <input class="form-input" type="text" id="needed-funding" />
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">create project</button>
+  </div>
+</form>
+
+<script src="/js/create-project.js"></script>
