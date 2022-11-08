@@ -14,3 +14,5 @@ const logout = async () => {
 };
 
 document.querySelector('#logout').addEventListener('click', logout);
+
+document.querySelector('#profile').addEventListener('click', () => document.location = '/profile')
